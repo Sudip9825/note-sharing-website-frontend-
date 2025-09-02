@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 
-const Navbar = ({ user }) => {
+const Navbar = ({ user, setShowNotes }) => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -15,7 +15,9 @@ const Navbar = ({ user }) => {
 
   return (
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
-      <img src={logo} alt="" height={100} width={100} />
+      <RouterLink to="/">
+        <img src={logo} alt="" height={100} width={100} />
+      </RouterLink>
       <ul>
         <li>
           <ScrollLink to="hero" smooth={true} offset={0} duration={500}>
@@ -23,7 +25,7 @@ const Navbar = ({ user }) => {
           </ScrollLink>
         </li>
         <li>
-          <button className="btn">upload notes</button>
+          <button className="btn" onClick={() => setShowNotes(true)}>upload notes</button>
         </li>
         <li className="btn">
           <ScrollLink to="title" smooth={true} offset={0} duration={500}>
