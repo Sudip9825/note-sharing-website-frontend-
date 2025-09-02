@@ -1,0 +1,15 @@
+.gallery{
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+}
+.photos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.photos img{
+    width: 23%;
+    border-radius: 10px;
+}
