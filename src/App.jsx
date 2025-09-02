@@ -12,6 +12,7 @@ import VideoPlayer from './Components/VideoPlayer/VideoPlayer';
 import Login from './Components/Login/Login';
 import { Routes, Route } from 'react-router-dom';
 import Notes from './Components/Notes/Notes'; // Import Notes component
+import Subject from './Components/Subject/Subject'; // Import Subject component
 
 const App = () => {
   const [playState, setPlayState] = useState(false);
@@ -40,6 +41,7 @@ const App = () => {
           </>
         } />
         <Route path="/login" element={<Login />} />
+        <Route path="/subject/:subjectName" element={<Subject />} />
       </Routes>
       {showNotes && <Notes onClose={() => setShowNotes(false)} />} {/* Conditionally render Notes */}
     </>

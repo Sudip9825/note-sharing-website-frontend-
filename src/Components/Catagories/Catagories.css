@@ -1,9 +1,14 @@
 .catagories{
     margin: 80px auto;
     width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+    gap: 25px; /* Space between grid items */
+}
+.catagory-link {
+    display: block; /* Ensure the link takes full grid cell space */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
 }
 .catagory img{
     width: 100%;
@@ -11,7 +16,7 @@
     display: block;
 }
 .catagory{
-    flex-basis: 31%;
+    /* flex-basis: 31%; Removed, grid handles sizing */
     position: relative;
 }
 
